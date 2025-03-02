@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block title %}
+faverate
+{% endblock %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+<header>
+   <div class="main-box">
+     <div class="box">
+        <a href="{% url 'addwatch' %}">+</a>
+     </div>
+     <h3>Add Watched</h3>
+   </div>
+   <div class="main-box">
+     <div class="box">
+         <a href="{% url 'addwatchlater' %}">+</a>
+     </div>
+     <h3>Add Watchlater</h3>
+   </div>
+</header>
+
+{% endblock %}

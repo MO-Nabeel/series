@@ -1,0 +1,19 @@
+{% extends "main.html" %}
+{% block title %}
+update
+{% endblock %}
+
+{% block content %}
+<div class="container min-vh-100">
+    <h1 class="text-center mt-4">update</h1>
+    <div class="row justify-content-center align-items-center" style="height: 80vh;">
+        <div class="col-sm-6">
+            <form method="post" enctype="multipart/form-data" class="p-4 border rounded shadow-lg bg-white">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit" class="btn btn-warning">submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
